@@ -19,11 +19,25 @@ void setup()
   v0 = new PVector(x0, y0);
   v1 = new PVector(x1, y1);
   
-  noLoop();// no animation (run only once)
+  //noLoop();// no animation (run only once)
+}
+
+void update()
+{
+  //init vectors
+  int low=0;
+  int high=200;
+  int x0 = (int)random(low, high);
+  int y0 = (int)random(low, high);
+  int x1 = (int)random(low, high);
+  int y1 = (int)random(low, high);
+  v0 = new PVector(x0, y0);
+  v1 = new PVector(x1, y1);
 }
 
 void draw() 
 {
+  update();
   //size(200, 200); //working area dimensions, if not specified size of window?
   //loadPixels();  
   ////img.loadPixels();
@@ -127,3 +141,4 @@ void line_bresenham(PVector v0, PVector v1, color c)
       }
   }
 }
+
